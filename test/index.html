@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tests</title>
+    <link rel="stylesheet" href="../src/js/vendor/mocha/mocha.css">
+
+</head>
+<body>
+    <div id="mocha"></div>
+
+    <script src="../src/js/vendor/mocha/mocha.js"></script>
+
+	<script data-main="main-tests" src="../src/js/vendor/requirejs/require.js"></script>
+
+    <script src="../src/js/vendor/blanket/dist/qunit/blanket.js" data-cover-only="../src/js/component"></script>
+    <script type="text/javascript" src="../node_modules/grunt-blanket-mocha/support/mocha-blanket.js"></script>
+
+    <script>
+    /* global blanket */
+    if (window.PHANTOMJS) {
+        blanket.options("reporter", "../node_modules/grunt-blanket-mocha/support/grunt-reporter.js");
+    }
+	</script>
+
+    <style>
+    	#blanket-main { margin: 0 25px 0 65px; font-size: 12px }
+    </style>
+</body>
+</html>

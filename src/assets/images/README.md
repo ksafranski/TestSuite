@@ -1,0 +1,3 @@
+# Images
+
+Notes on images including attribution, license, or special usage instructions...
